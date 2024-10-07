@@ -15,16 +15,17 @@ import { Icons } from '@/components/Icons'
 import { onboardingData, tokenData } from '@/utils/data'
 import ImageCard from '@/components/ImageCard'
 import Footer from '@/components/Footer'
+import TogglePhone from '@/components/Buttons/TogglePhone'
+import FilterBtn from '@/components/Buttons/FilterBtn'
 
 
 
 const DesignPage = () => {
-  const [phone, setPhone] = useState('IOS')
   return (
     <div className='w-full bg-white min-h-[100vh]'>
       <Header appPage={true} />
       <Seperator />
-      <div className='w-full px-[5%] mt-4'>
+      <div className='w-full px-[5%] mt-4 mb-[400px]'>
         <Filter />
         <Hero />
         <div>
@@ -57,14 +58,8 @@ const DesignPage = () => {
               <Icons.dot />
               <span>Videos</span>
             </div>
-            <div className='bg-gray-300 flex items-start px-1.5 rounded-[32px] py-0.5'>
-              <h5 onClick={() => setPhone('IOS')} className={`text-base cursor-pointer font-medium px-6 rounded-[21px] py-3.5 ${phone === 'IOS' ? 'text-white bg-black-100' : 'text-black'}`}>IOS</h5>
-              <h5 onClick={() => setPhone('Android')} className={`text-base font-medium cursor-pointer px-6 rounded-[21px] py-3.5 ${phone === 'Android' ? 'text-white bg-black-100' : 'text-black'}`}>Android</h5>
-            </div>
-            <div className='flex items-center gap-5 py-2 px-3 cursor-pointer text-base font-semibold text-gray-700  rounded-2xl bg-gray-50'>
-              <span>Filter</span>
-              <Icons.filter />
-            </div>
+            <TogglePhone />
+            <FilterBtn />
           </div>
         </div>
         <div className='mb-20'>

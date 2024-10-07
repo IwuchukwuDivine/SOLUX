@@ -31,7 +31,7 @@
   transform: translateX(-50%);
   top: -55%;
 }
-
+/* custom toggle switch */
 .toggle-switch {
   width: 36px; 
   height: 20px;
@@ -81,6 +81,7 @@
 .toggle-switch:active::after {
   width: 20px;
 }
+
 
 @layer utilities {
   .text-balance {

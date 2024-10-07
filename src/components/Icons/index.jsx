@@ -177,4 +177,11 @@ export const Icons = {
       <path d="M10.9997 12.3456V3.17896M10.9997 12.3456C10.3578 12.3456 9.15858 10.5175 8.70801 10.054M10.9997 12.3456C11.6416 12.3456 12.8407 10.5175 13.2914 10.054" stroke={color} stroke-width="1.83333" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   ),
+  
+  checkmark:({ size = 24, color = "#231F20", ...props }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 20 20" fill="none">
+      <path d="M18.3337 9.9999C18.3337 5.39752 14.6027 1.66656 10.0003 1.66656C5.39795 1.66656 1.66699 5.39752 1.66699 9.9999C1.66699 14.6022 5.39795 18.3332 10.0003 18.3332C14.6027 18.3332 18.3337 14.6022 18.3337 9.9999Z" stroke={color} stroke-width="1.25"/>
+      <path d="M6.66699 10.4162L8.75033 12.4995L13.3337 7.49954" stroke={color} stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  )
 }
