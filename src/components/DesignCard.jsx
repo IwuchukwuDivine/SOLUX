@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 const DesignCard = ({design}) => {
   const router = useRouter();
   return (
-    <div onClick={() => router.push(`/design`)} className='bg-gray-300 cursor-pointer transition-transform hover:-translate-y-6 duration-75 ease-in-out rounded-md flex flex-col items-center min-w-[256px] py-2 px-4'>
+    <div onClick={() => router.push(`/design`)} className='bg-gray-300 cursor-pointer rounded-md flex flex-col items-center min-w-[256px] py-2 px-4'>
       <div className='bg-gray-200 flex items-center gap-1.5 rounded-xl mix-blend-multiply py-1 px-2'>
         <p className='bg-white px-1.5 py-0.5 rounded-xl text-[8.66px] font-medium text-gray-700'>New Feature</p>
         <p className='text-gray-700 font-medium text-[8.66px]'>We’ve just released a new feature</p>
