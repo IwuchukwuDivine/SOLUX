@@ -22,6 +22,7 @@ module.exports = {
         primary: {
           100: '#F72585',
           200: '#D9D9D9',
+          300: '#FB5029'
         },
         success: {
           500: '#12B76A'

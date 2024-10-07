@@ -7,15 +7,17 @@ import Avatar from '@/assets/images/Avatar.png'
 import { Icons } from './Icons'
 import ProfileDropdown from './Dropdowns/Profile'
 import Resources from './Dropdowns/Resources'
+import { useRouter } from 'next/navigation'
 
 
-const Header = () => {
+const Header = ({appPage}) => {
   const [showProfile, setShowProfile] = useState(false)
   const [showResources, setShowResources] = useState(false)
+  const router = useRouter()
   return (
     <nav className='w-full flex items-center justify-between px-[4%] py-6'>
       <div className='flex items-center gap-10'>
-        <div className='flex items-center gap-2'>
+        <div onClick={() => router.push('/')} className='flex cursor-pointer items-center gap-2'>
           <Image src={logo} alt='logo' width={50} height={50} />
           <h4 className='text-black text-xl font-semibold'>SoLUX</h4>
         </div>
@@ -40,13 +42,29 @@ const Header = () => {
           <Icons.zap />
           <span className='text-white font-semibold text-sm'>Upgrade now</span>
         </button>
-        <div>
-          <Icons.bookmark />
-        </div>
-        <div className='relative cursor-pointer tooltip'>
-          <Icons.bitcoin />
-          <span className='text-xs tooltip-text top-[200%] py-2 px-3 translate-x-[-50%] left-[50%] font-semibold text-white bg-black-100 whitespace-nowrap absolute rounded-[8px]'>Tip us using getcode</span>
-        </div>
+        {
+          !appPage && 
+          <>
+            <div>
+              <Icons.bookmark />
+            </div>
+            <div className='relative cursor-pointer tooltip'>
+              <Icons.bitcoin />
+              <span className='text-xs tooltip-text top-[200%] py-2 px-3 translate-x-[-50%] left-[50%] font-semibold text-white bg-black-100 whitespace-nowrap absolute rounded-[8px]'>Tip us using getcode</span>
+            </div>
+          </>
+        }
+        {
+          appPage && 
+          <>
+            <div>
+              <Icons.settings size={20} color='#667085' />
+            </div>
+            <div className='relative cursor-pointer tooltip'>
+              <Icons.notification />
+            </div>
+          </>
+        }
         <div className='cursor-pointer relative'>
           <div onClick={() => setShowProfile(!showProfile)} className='flex items-center gap-2'>
             <Image  className='rounded-full' width={40} height={40} src={Avatar} alt='avatar' />

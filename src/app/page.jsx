@@ -4,7 +4,7 @@ import DesignCard from '@/components/DesignCard'
 import Filter from '@/components/Filter'
 import { Icons } from '@/components/Icons'
 import Chip from '@/components/chips'
-import Footer from '@/components/footer'
+import Register from '@/components/Register'
 import Header from '@/components/header'
 import Seperator from '@/components/seperator'
 import { appsData, data } from '@/utils/data'
@@ -56,7 +56,7 @@ const Home = () => {
             }
           </div>
         </div>
-        <Footer />
+        <Register />
       </div>
     </div>
   )
