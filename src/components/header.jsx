@@ -38,7 +38,7 @@ const Header = ({appPage}) => {
         </ul>
       </div>
       <div className='flex items-center gap-6'>
-        <button className='flex items-center gap-2 bg-primary-100 justify-center rounded-lg py-2.5 px-4 border border-gray-400 shadow-custom'>
+        <button onClick={() => router.push('/price')} className='flex items-center gap-2 bg-primary-100 justify-center rounded-lg py-2.5 px-4 border border-gray-400 shadow-custom'>
           <Icons.zap />
           <span className='text-white font-semibold text-sm'>Upgrade now</span>
         </button>
