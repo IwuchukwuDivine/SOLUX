@@ -4,6 +4,7 @@ import DesignCard from '@/components/DesignCard'
 import Filter from '@/components/Filter'
 import { Icons } from '@/components/Icons'
 import Chip from '@/components/chips'
+import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Seperator from '@/components/seperator'
 import { appsData, data } from '@/utils/data'
@@ -16,7 +17,7 @@ const Home = () => {
   const firstHalf = appsData.slice(0, halfLength)
   const secondHalf = appsData.slice(halfLength)
   return (
-    <div className='w-full bg-white min-h-[100vh]'>
+    <div className='w-full select-none bg-white min-h-[100vh]'>
       <Header/>
       <Seperator />
       <div className='w-full px-[5%] mt-4'>
@@ -45,7 +46,7 @@ const Home = () => {
             ))
           }
         </div>
-        <div className='mt-[70px]'>
+        <div className='mt-[60px]'>
           <h3 className='text-5xl mb-8 font-semibold text-gray-700'>Discover</h3>
           <div className='w-full gap-1 grid lg:grid-cols-4 md:grid-cols-3'>
             {
@@ -55,6 +56,7 @@ const Home = () => {
             }
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   )

@@ -13,6 +13,74 @@
     --foreground: #ededed;
   }
 }
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+
+}
+.tooltip-text{
+  visibility: hidden;
+  opacity: 0;
+}
+.tooltip-text::before{
+  content: "";
+  border: 10px solid;
+  border-color:  transparent  transparent #030103 transparent ;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -55%;
+}
+
+.toggle-switch {
+  width: 36px; 
+  height: 20px;
+  position: relative;
+  display: block;
+  background: #E4E7EC;
+  border-radius: 12px; 
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3), inset 0px -1px 4px rgba(255, 255, 255, 0.3);
+}
+
+.sun, .moon {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+}
+
+.toggle-switch::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#mode-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+#mode-toggle:checked + .toggle-switch {
+  background: #242424;
+}
+
+#mode-toggle:checked + .toggle-switch::after {
+  left: 34px; 
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.toggle-switch:active::after {
+  width: 20px;
+}
 
 @layer utilities {
   .text-balance {
