@@ -51,6 +51,12 @@ import token6 from '@/assets/token/token6.png';
 import token7 from '@/assets/token/token7.png';
 import token8 from '@/assets/token/token8.png';
 
+import tipCode from '@/assets/images/tipcode.svg'
+
+import blog1 from '@/assets/Resources/Image.png'
+import blog2 from '@/assets/Resources/Image (1).png'
+import blog3 from '@/assets/Resources/Image (2).png'
+
 export const data = [
   {
     id: 1,
@@ -214,4 +220,80 @@ export const onboardingData = [
 ]
 export const tokenData = [
   token1, token2, token3, token4, token5, token6, token7, token8
+]
+
+export const profileActions = [
+  {
+    name: 'Wallet',
+    icon: 'wallet'
+  },
+  {
+    name: 'Collections',
+    icon: 'bookmark'
+  },
+  {
+    name: 'Account Settings',
+    icon: 'settings'
+  },
+  {
+    name: 'Location',
+    icon: 'location'
+  },
+  {
+    name: 'Stats',
+    icon: 'stats'
+  },
+  {
+    name: 'Hackathons',
+    icon: 'stars'
+  },
+  {
+    name: 'Tip SOLUX using getcode',
+    img: tipCode
+  },
+  {
+    name: 'Light mode',
+    toggle: 'mode-toggle'
+  }
+]
+
+export const resources = [
+  {
+    title: 'Blog',
+    text: 'The latest industry news, updates and info.',
+    icon: 'book'
+  },
+  {
+    title: 'Design Hackathons',
+    text: 'Have a big idea, want to spread the gospel of Solana',
+    icon: 'zap'
+  },
+  {
+    title: 'Video tutorials',
+    text: 'Get up and running on new features and techniques.',
+    icon: 'video'
+  },
+  {
+    title: 'Web3 Design Kits',
+    text: 'Essential kits to make your design process easier',
+    icon: 'file'
+  }
+]
+
+export const blogPosts = [
+  {
+    title: 'Auto-layout explained',
+    text: 'Jump right in — get an overview of the basics and see how it works',
+    image: blog1
+  },
+  {
+    title: 'Top techniques to level up your web3 product design',
+    text: 'The latest best practices and techniques to level up your web3 product design',
+    image: blog2
+  },
+  {
+    title: 'Sythesize data like a pro through affinity diagramming',
+    text: 'Synthesis is the mysterious process of combining data to create something new',
+    image: blog3
+  }
 ]
