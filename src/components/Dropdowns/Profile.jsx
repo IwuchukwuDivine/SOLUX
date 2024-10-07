@@ -9,7 +9,7 @@ import { Icons } from "../Icons"
 const ProfileDropdown = () => {
   const [darkMode, setDarkMode] = useState(false)
   return (
-    <div className='absolute z-auto bg-white border min-w-[300px] border-gray-300 right-0 shadow-lg rounded-lg py-3 top-[120%]'>
+    <div className='absolute z-50 bg-white border min-w-[300px] border-gray-300 right-0 shadow-lg rounded-lg py-3 top-[120%]'>
       <div className='flex items-center gap-3 pb-3 px-6'>
         <div className='w-[40px] h-[40px] rounded-full relative'>
           <Image src={Avatar} alt='avatar' className='rounded-full' width={40} height={40} />
