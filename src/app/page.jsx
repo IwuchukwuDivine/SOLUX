@@ -10,12 +10,14 @@ import Seperator from '@/components/seperator'
 import { appsData, data } from '@/utils/data'
 import React, { useState } from 'react'
 import TogglePhone from '@/components/Buttons/TogglePhone'
+import { useRouter } from 'next/navigation'
 
 const Home = () => {
   const [activeApp, setActiveApp] = useState(appsData[0])
   const halfLength = Math.ceil(appsData.length / 2)
   const firstHalf = appsData.slice(0, halfLength)
   const secondHalf = appsData.slice(halfLength)
+  const router = useRouter()
   return (
     <div className='w-full select-none bg-white min-h-[100vh]'>
       <Header/>
@@ -25,7 +27,7 @@ const Home = () => {
         <div className='w-full my-[33px] flex items-center justify-between'>
           <h3 className='text-2xl font-semibold text-gray-700'>Apps</h3>
           <div className='flex items-center gap-6'>
-            <h5 className='text-gray-700 italic underline font-semibold'>Browse Solana Communities</h5>
+            <h5 onClick={() => router.push('/community')} className='text-gray-700 cursor-pointer italic underline font-semibold'>Browse Solana Communities</h5>
             <TogglePhone />
           </div>
         </div>
