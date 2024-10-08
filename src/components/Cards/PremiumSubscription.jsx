@@ -1,8 +1,43 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import Seperator from '../seperator'
 import { Icons } from '../Icons'
+import { transferSol } from '../solanaTx'
+import { useWallet } from '@solana/wallet-adapter-react'
+import { handleWalletConnect } from '../walletProvider/wallectAction'
 
 const PremiumSubscription = () => {
+  const {publicKey, sendTransaction} = useWallet()
+  const [txMessage, setTxMessage] = useState("")
+  const [loading, setLoading] = useState(Boolean)
+
+  const payment = async () => {
+    setTxMessage("")
+    try {
+      setLoading(true)
+      const tx = await transferSol(publicKey, 0.14, sendTransaction);
+
+      if (!tx.err) {
+        const message = "Transaction confirmed successfully"
+        console.log('Transaction confirmed successfully.');
+        setTxMessage(message)
+      } else {
+        const message = `'Transaction failed:', ${tx.err}`
+        console.error(message);
+        throw new Error(message)
+       
+      }
+    } catch (error) {
+      console.error('Error during transaction:', error);
+      setTxMessage(error.message)
+      return
+    } finally {
+      setLoading(false)
+    }
+
+  }
+
   return (
     <div className='bg-black-100 cursor-pointer rounded-[30px] py-[42px] px-[31px]'>
       <div className='flex w-full gap-[40px]'>
@@ -45,9 +80,10 @@ const PremiumSubscription = () => {
           </li>
         </ul>
       </div>
-      <button className='bg-white w-full mt-12 font-medium p-4 text-base text-blue-100 rounded-[100px] flex items-center justify-center'>
-        Start for free
+      <button onClick={publicKey ? payment : handleWalletConnect} disabled={loading} className='bg-white w-full mt-12 font-medium p-4 text-base text-blue-100 rounded-[100px] flex items-center justify-center'>
+        {loading ? "Loading..." : "Make Payment"}
       </button>
+      <p className='text-white text-base mt-2'>{txMessage}</p>
     </div>
   )
 }

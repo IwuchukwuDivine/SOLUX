@@ -87,6 +87,7 @@ const Header = ({appPage}) => {
        
         }
       </div>
+      <WalletMultiButton style={{ display: 'none' }} />
     </nav>
   )
 }
