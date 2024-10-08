@@ -1,3 +1,4 @@
+import AppWalletProvider from "@/components/walletProvider/AppWalletProvider";
 import "./globals.css";
 import { Inter } from 'next/font/google'
 
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
     <html className={inter.className} lang="en">
       <body
       >
+        <AppWalletProvider>
         {children}
+        </AppWalletProvider>
       </body>
     </html>
   );
