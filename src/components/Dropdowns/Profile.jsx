@@ -6,7 +6,9 @@ import Avatar from '@/assets/images/Avatar.png'
 import { profileActions } from '@/utils/data'
 import Seperator from "../seperator"
 import { Icons } from "../Icons"
+import { useWallet } from "@solana/wallet-adapter-react"
 const ProfileDropdown = () => {
+  const { disconnect } = useWallet()
   const [darkMode, setDarkMode] = useState(false)
   return (
     <div className='absolute z-50 bg-white border min-w-[300px] border-gray-300 right-0 shadow-lg rounded-lg py-3 top-[120%]'>
@@ -52,7 +54,7 @@ const ProfileDropdown = () => {
       <Seperator />
       <div className='flex items-center gap-4 px-6 mt-4'>
         <Icons.logout />
-        <p className='text-gray-700 whitespace-nowrap text-sm font-medium'>Logout</p>
+        <p className='text-gray-700 whitespace-nowrap text-sm font-medium' onClick={disconnect}>Logout</p>
       </div>
     </div>
   )

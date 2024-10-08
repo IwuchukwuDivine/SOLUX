@@ -8,12 +8,16 @@ import { Icons } from './Icons'
 import ProfileDropdown from './Dropdowns/Profile'
 import Resources from './Dropdowns/Resources'
 import { useRouter } from 'next/navigation'
+import { useWallet } from '@solana/wallet-adapter-react'
+import { WalletConnectButton, WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 
 
 const Header = ({appPage}) => {
   const [showProfile, setShowProfile] = useState(false)
   const [showResources, setShowResources] = useState(false)
   const router = useRouter()
+  const { publicKey } = useWallet()
+  
   return (
     <nav className='w-full flex items-center justify-between px-[4%] py-6'>
       <div className='flex items-center gap-10'>
@@ -38,6 +42,7 @@ const Header = ({appPage}) => {
         </ul>
       </div>
       <div className='flex items-center gap-6'>
+      
         <button onClick={() => router.push('/price')} className='flex items-center gap-2 bg-primary-100 justify-center rounded-lg py-2.5 px-4 border border-gray-400 shadow-custom'>
           <Icons.zap />
           <span className='text-white font-semibold text-sm'>Upgrade now</span>
@@ -65,6 +70,7 @@ const Header = ({appPage}) => {
             </div>
           </>
         }
+{publicKey ?
         <div className='cursor-pointer relative'>
           <div onClick={() => setShowProfile(!showProfile)} className='flex items-center gap-2'>
             <Image  className='rounded-full' width={40} height={40} src={Avatar} alt='avatar' />
@@ -73,7 +79,13 @@ const Header = ({appPage}) => {
           {
             showProfile && <ProfileDropdown  />
           }
-        </div>
+        </div> :
+        <button onClick={() => router.push('/login')} className='flex items-center gap-2 bg-primary-100 justify-center rounded-lg py-2.5 px-4 border border-gray-400 shadow-custom'>
+        {/* <Icons.zap /> */}
+        <span className='text-white font-semibold text-sm'>Login</span>
+      </button>
+       
+        }
       </div>
     </nav>
   )
