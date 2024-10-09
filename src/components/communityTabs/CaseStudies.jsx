@@ -7,44 +7,45 @@ import study1 from '@/assets/images/study1.png'
 import study2 from '@/assets/images/study2.png'
 import study3 from '@/assets/images/study3.png'
 import study4 from '@/assets/images/study4.png'
+import study5 from '@/assets/images/study5.png'
 
-import phoenix from '@/assets/logos/phoenix.png'
-import birdeye from '@/assets/logos/birdeye.png'
-import divy from '@/assets/logos/divy.png'
+import phantom from '@/assets/logos/phantom.png'
+import solflare from '@/assets/logos/solflare.png'
+import parcl from '@/assets/logos/parcl.png'
 import bonk from '@/assets/logos/bonk.png'
-import pack from '@/assets/logos/pack.png'
+
 
 const CaseStudies = () => {
   const studies = [
     {
       name: 'PHANTOM CASE STUDY',
-      logo: phoenix,
+      logo: phantom,
+      image: study5
+    },
+    {
+      name: 'SOLFLARE CASE STUDY',
+      logo: solflare,
       image: study
     },
     {
       name: 'PARCL CASE STUDY',
-      logo: birdeye,
+      logo: parcl,
       image: study1
     },
     {
-      name: 'BONK CASE STUDY',
-      logo: divy,
-      image: study2
-    },
-    {
-      name: 'All Domains ID',
-      logo: pack,
+      name: 'SOLFLARE CASE STUDY',
+      logo: parcl,
       image: study3
     },
     {
-      name: 'PARCL CASE STUDY',
+      name: 'BONK CASE STUDY',
       logo: bonk,
       image: study4
     },
     {
-      name: 'PHANTOM CASE STUDY',
-      logo: phoenix,
-      image: study
+      name: 'All Domains ID',
+      logo: bonk,
+      image: study3
     }
   ]
   return (
