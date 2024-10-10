@@ -14,7 +14,7 @@ import VariantBtn from '@/components/Buttons/VariantBtn'
 import { Icons } from '@/components/Icons'
 import { onboardingData, tokenData } from '@/utils/data'
 import ImageCard from '@/components/ImageCard'
-import FooterNav from '@/components/Footer'
+import FooterNav from '@/components/FooterNav'
 import TogglePhone from '@/components/Buttons/TogglePhone'
 import FilterBtn from '@/components/Buttons/FilterBtn'
 
