@@ -8,7 +8,7 @@ import React, { useState } from 'react'
 import star from '@/assets/images/Star 2.png'
 import Image from 'next/image'
 import Chip from '@/components/chips'
-import Footer from '../../components/Footer'
+import FooterNav from '@/components/Footer'
 import { Icons } from '@/components/Icons'
 import TogglePhone from '@/components/Buttons/TogglePhone'
 import FilterBtn from '@/components/Buttons/FilterBtn'
@@ -84,7 +84,7 @@ const Community = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <FooterNav />
     </div>
   )
 }
