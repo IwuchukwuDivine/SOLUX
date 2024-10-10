@@ -4,7 +4,7 @@ import Image from "next/image";
 import SolanaLogo from "@/assets/images/soluxcom-high-resolution-logo-white-transparent.png";
 import bottomsSection from "../../assets/images/Frame 4.png";
 import orange from "@/assets/images/Group 1.png";
-import GoogleIcon from "../../assets/images/Social icon.png";
+import GoogleIcon from "../../assets/images/social_icon.png";
 import { handleWalletConnect } from "@/components/walletProvider/wallectAction";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
