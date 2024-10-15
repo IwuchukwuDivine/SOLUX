@@ -2,7 +2,7 @@ import React from 'react'
 import solux from '@/assets/images/solux-logo.png'
 import Image from 'next/image'
 import logos from '@/assets/images/brands.png'
-const Footer = () => {
+const FooterNav = () => {
   return (
     <footer className='bg-gray-300 flex flex-col gap-[213px] pt-[170px] pb-[70px] pr-[50px]'>
       <div className='flex items-start gap-[211px] justify-between'>
@@ -47,4 +47,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterNav
