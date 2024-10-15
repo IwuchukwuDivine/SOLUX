@@ -7,10 +7,12 @@ export default function Welcome() {
   return (
     <div className="w-full bg-white h-screen justify-center items-center flex">
       <div className="w-[50%] h-[80%] flex justify-center items-center flex-col gap-5">
-        <Image className="w-[100px]" alt="" src={SolanaLogo2} />
-        <h1 className="text-2xl font-bold">
-          Would you like to join our community of web3 designers
-        </h1>
+        <div className="w-full flex justify-center items-center flex-col gap-1">
+          <Image className="w-[100px]" alt="" src={SolanaLogo2} />
+          <h1 className="text-2xl font-bold">
+            Would you like to join our community of web3 designers
+          </h1>
+        </div>
 
         <div className="flex flex-col gap-3 w-full">
           <div className="flex flex-row gap-4 w-full rounded-xl bg-[#F9FAFB] py-4 px-4">
@@ -22,8 +24,8 @@ export default function Welcome() {
             <label htmlFor="no">Not yet, I’m just exploring</label>
           </div>
 
-          <button className="bg-black text-white py-8 rounded-[50px] mt-[16px]">
-            Done
+          <button className="bg-black text-white py-4 rounded-[8px] mt-[30px]">
+            Sign Up
           </button>
         </div>
       </div>

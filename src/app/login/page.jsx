@@ -36,11 +36,11 @@ const SignUpform = () => {
             patterns. Used and trusted by top designers, design engineer etc
           </p>
         </div>
-        <button className="flex flex-row gap-3 py-2 font-bold justify-center items-center w-full rounded-[32px] bg-transparent border border-black">
+        <button className="flex flex-row gap-3 py-2 font-bold justify-center items-center w-full rounded-[8px] bg-transparent border border-black">
           <Image src={orange} alt="orange" className="w-8" /> Connect Your
           Solana Wallet
         </button>
-        <button className="flex flex-row gap-3 py-2 text-gray-700 justify-center items-center w-full rounded-[32px] bg-transparent border border-black">
+        <button className="flex flex-row gap-3 py-2 text-gray-700 justify-center items-center w-full rounded-[8px] bg-transparent border border-black">
           <Image src={GoogleIcon} alt="orange" className="w-5" /> Sign in with
           Google
         </button>
@@ -66,7 +66,7 @@ const Form = () => {
           type="text"
           id="name"
           placeholder="name"
-          className="border border-black rounded-3xl py-3 px-2 outline-none"
+          className="border border-black rounded-[8px] py-3 px-2 outline-none"
         />
       </div>
       <div className="flex flex-col gap-2 text-xs">
@@ -75,7 +75,7 @@ const Form = () => {
           type="email"
           id="email"
           placeholder="email"
-          className="border border-black rounded-3xl py-3 px-2 outline-none"
+          className="border border-black rounded-[8px] py-3 px-2 outline-none"
         />
       </div>
       <div className="flex flex-col gap-2 text-xs">
@@ -84,10 +84,10 @@ const Form = () => {
           type="password"
           id="password"
           placeholder="enter your password"
-          className="border border-black rounded-3xl py-3 px-2 outline-none"
+          className="border border-black rounded-[8px] py-3 px-2 outline-none"
         />
       </div>
-      <button className="py-4 text-white justify-center items-center w-full rounded-[32px] bg-black">
+      <button className="py-4 text-white justify-center items-center w-full rounded-[8px] bg-black">
         Sign up
       </button>
       <div className="flex flex-row justify-center gap-2 text-xs">

@@ -11,19 +11,19 @@ export default function Welcome() {
         <h1 className="text-3xl font-bold">Welcome to SolUX</h1>
         <div className="flex flex-col w-full mt-4 gap-8">
           <div
-            className="rounded-xl bg-transparent
+            className="rounded-[8px] bg-transparent
             border border-black py-5 px-3"
           >
-            <p>Moriah chisom</p>
+            <p className="text-gray-500">Moriah chisom</p>
           </div>
           <div
-            className="rounded-xl bg-transparent flex flex-row
+            className="rounded-[8px] bg-transparent flex flex-row
            justify-between border border-black py-5 px-3"
           >
-            <p>What is your role in web3</p>
+            <p className="text-gray-500">What is your role in web3</p>
           </div>
-          <button className="bg-black text-white py-8 rounded-[32px]">
-            Continue
+          <button className="bg-black text-white py-5 mt-[30px] rounded-[8px]">
+            Sign up
           </button>
         </div>
       </div>
