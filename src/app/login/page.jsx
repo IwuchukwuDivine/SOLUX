@@ -9,10 +9,9 @@ import { handleWalletConnect } from "@/components/walletProvider/wallectAction";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 import React, { useEffect } from "react";
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation";
 
 export default function Login() {
-
   return (
     <div className="w-[100%] bg-white h-screen p-2 flex flex-row justify-between items-center">
       <div className="flex relative flex-col items-center gap-4 bg-black h-full w-[45%] rounded-xl overflow-hidden">
@@ -36,10 +35,10 @@ const SignUpform = () => {
 
   useEffect(() => {
     if (publicKey) {
-      redirect('/');
+      redirect("/");
     }
   }, [publicKey]);
-  
+
   return (
     <div className="w-[45%] items-start flex h-full justify-center flex-col">
       <div className="w-[80%] flex flex-col h-[90%] gap-4">
@@ -50,10 +49,15 @@ const SignUpform = () => {
             patterns. Used and trusted by top designers, design engineer etc
           </p>
         </div>
-        <button className="flex flex-row gap-3 py-2 font-bold justify-center items-center w-full rounded-[32px] bg-transparent border border-black">
-          <Image src={orange} alt="orange" className="w-8" /> Connect Your
-          Solana Wallet
+
+        <button
+          onClick={handleWalletConnect}
+          className="flex flex-row gap-3 py-2 font-bold justify-center items-center w-full rounded-[32px] bg-transparent border border-black"
+        >
+          <Image src={orange} alt="orange" className="w-8" />{" "}
+          {publicKey ? publicKey.toBase58() : <>Connect Your Solana Wallet </>}
         </button>
+        <WalletMultiButton style={{ display: 'none' }} />
         <button className="flex flex-row gap-3 py-2 text-gray-700 justify-center items-center w-full rounded-[32px] bg-transparent border border-black">
           <Image src={GoogleIcon} alt="orange" className="w-5" /> Sign in with
           Google
